@@ -4,21 +4,11 @@ services:
     image: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
-# services:
-#   db:
-#     image: postgres
-#     volumes:
-#       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: InstabugChat_development
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: 123456
-      
-  # redis:
-  #   image: "redis:alpine"
-  #   container_name: processing_queues
-  #   expose:
-  #     - 6379
+
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails db:create && bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
@@ -28,31 +18,4 @@ services:
       - "3000:3000"
     depends_on:
       - db
-  # web:
-  #   build: .
-  #   command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails db:create && bundle exec rails db:migrate  &&  bundle exec rails s -p 3000 -b '0.0.0.0'"
-  #   volumes:
-  #     - .:/app
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - db
-  #     # - redis
-  #   # links:
-  #   #   - redis
-  #   environment:
-  #     - RAILS_ENV=development
-  #     # - REDIS_URL=redis://processing_queues
 
-  # sidekiq:
-  #   depends_on:
-  #     - db
-  #     - redis
-  #     - web
-  #   build: .
-  #   command: bundle exec sidekiq      
-  #   links:
-  #     - redis
-  #   environment:
-  #     - RAILS_ENV=development
-  #     - REDIS_URL=redis://processing_queues
