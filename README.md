@@ -9,7 +9,6 @@
 <li> Add chats to a target application </li>
 <li> The ability to add messages to be associated to a certain chat </li>
 <li> A postgresql Database that contains Models for ( Application , Chat , Message ) </li>
-<li> Integration with elastic search </li>
  <hr>
 <h2>User Manual 📓 </h2>
 
