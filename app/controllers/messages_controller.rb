@@ -1,22 +1,8 @@
 class MessagesController < ApplicationController
     protect_from_forgery with: :null_session
     def index 
-        puts " hello from messages"
     end 
 
-
-    # Column    |              Type              | Collation | Nullable |               Default                
-    # -------------+--------------------------------+-----------+----------+--------------------------------------
-    #  id          | bigint                         |           | not null | nextval('messages_id_seq'::regclass)
-    #  msg_number  | integer                        |           |          | 
-    #  content     | character varying              |           |          | 
-    #  sender      | character varying              |           |          | 
-    #  created_at  | timestamp(6) without time zone |           | not null | 
-    #  updated_at  | timestamp(6) without time zone |           | not null | 
-    #  chat_number | integer                        |           |          | 
-    #  chat_id     | bigint                         |           |          | 
-    # Indexes:
-    
     def create 
         puts "Inside message create"
         
@@ -68,7 +54,6 @@ class MessagesController < ApplicationController
         puts "Inside the search"
         query = MessageIndex.search(params[:query].to_s)
         @results = query.records
-        @total_results = query.total_entries
         render json: @results , status:200
     end
           
