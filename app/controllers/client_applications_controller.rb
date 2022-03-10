@@ -45,9 +45,4 @@ class ClientApplicationsController < ApplicationController
         
     end
 
-    def pattern_matcher_params
-        params.permit(
-          :name
-        )
-    end
 end
