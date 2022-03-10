@@ -30,5 +30,11 @@
 <p> To call the message APIs the user should provide either <code> application token </code> or <code> chat id  </code> in the calling url </p>
  
 <hr>
-
+<h2> Get it to work 🔧👨‍💻 </h2>
+ <ol>
+  <li> First you need to download the elastic search file from this <a href = "https://www.elastic.co/downloads/past-releases/elasticsearch-6-4-0"> link</a> </li>
+  <li> Run this command <code>~/Downloads/elasticsearch-6.4.0/bin/elasticsearch</code> and open <code>http://localhost:9200</code> to check that it's running </li>
+  <li> I assume that you will have rails env so just hit <code> rails s</code> </li>
+  <li> Now you can run the project with all its features and capabilites and use the endpoints in the <code> Instabug Chat Endpoints </code> postman collection </li>
+ </ol>
 <h4> All endpoint URLs are provided with examples in the <code> Instabug Chat Endpoints   </code>  postman collection so it's only required to download it and import it in the postman </h4>
