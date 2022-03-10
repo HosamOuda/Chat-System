@@ -1,0 +1,1492 @@
+{
+	"info": {
+		"_postman_id": "9b4e72f0-32a0-4644-a667-0262d6d03c21",
+		"name": "Instabug Chat Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Application",
+			"item": [
+				{
+					"name": "Create Application",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Youtube\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Application example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Youtube\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/applications",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "8a826e5b-59af-4a12-9f25-7fa989c2d34c"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.486209"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "fxh8sredqlhy75ke7jve,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Application created successfully \",\n    \"content\": {\n        \"id\": 4,\n        \"token\": \"4df1d551f\",\n        \"chat_count\": 0,\n        \"name\": \"Youtube\",\n        \"created_at\": \"2022-03-10T00:12:29.890Z\",\n        \"updated_at\": \"2022-03-10T00:12:29.890Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Applications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/applications",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Applications",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "a25b9740-a06a-4801-a735-b0792d01cbf5"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.088548"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "g6b65c500c1oqx0h9ak8,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"applications\": [\n        {\n            \"id\": 1,\n            \"token\": \"9034c0624\",\n            \"chat_count\": 0,\n            \"name\": \"facebook\",\n            \"created_at\": \"2022-03-05T00:14:07.090Z\",\n            \"updated_at\": \"2022-03-07T20:40:21.541Z\"\n        },\n        {\n            \"id\": 2,\n            \"token\": \"e39bf1d91\",\n            \"chat_count\": 8,\n            \"name\": \"twitter\",\n            \"created_at\": \"2022-03-05T10:54:50.903Z\",\n            \"updated_at\": \"2022-03-07T20:46:21.185Z\"\n        },\n        {\n            \"id\": 3,\n            \"token\": \"4ebbb2d9e\",\n            \"chat_count\": 0,\n            \"name\": \"wechat\",\n            \"created_at\": \"2022-03-07T20:50:26.739Z\",\n            \"updated_at\": \"2022-03-07T20:50:26.739Z\"\n        },\n        {\n            \"id\": 4,\n            \"token\": \"4df1d551f\",\n            \"chat_count\": 0,\n            \"name\": \"Youtube\",\n            \"created_at\": \"2022-03-10T00:12:29.890Z\",\n            \"updated_at\": \"2022-03-10T00:12:29.890Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get application by token",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications/4df1d551f",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"4df1d551f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "22876b5f-b79c-486a-8229-ffb88f3e09fc"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.085671"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "zgqgr2xo412h45eifwcm,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"token\": \"4df1d551f\",\n    \"chat_count\": 0,\n    \"name\": \"Youtube\",\n    \"created_at\": \"2022-03-10T00:12:29.890Z\",\n    \"updated_at\": \"2022-03-10T00:12:29.890Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Application",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Instagram\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/applications/4df1d551f",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"4df1d551f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Application",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\" : \"Instagram\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/applications/4df1d551f",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"4df1d551f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "88587f13-4255-47c1-b268-29afbc18bb16"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.575648"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "pn0dajcgjwbxv0np0uoc,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Instagram\",\n    \"token\": \"40b22bbdb\",\n    \"id\": 4,\n    \"chat_count\": 0,\n    \"created_at\": \"2022-03-10T00:12:29.890Z\",\n    \"updated_at\": \"2022-03-10T00:18:53.148Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Create Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/applications/40b22bbdb/chats",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"40b22bbdb",
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Chat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "javascript"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/applications/40b22bbdb/chats",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"40b22bbdb",
+										"chats"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "bc3bde4f-45c1-4255-9c40-db46b6bef015"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.851052"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "vo9x0ao3rdaawmadtk0j,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm,pn0dajcgjwbxv0np0uoc"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Chat created successfully \",\n    \"chat\": {\n        \"id\": 14,\n        \"messages_count\": 0,\n        \"created_at\": \"2022-03-10T00:22:58.834Z\",\n        \"updated_at\": \"2022-03-10T00:22:58.834Z\",\n        \"application_id\": 4,\n        \"application_token\": \"40b22bbdb\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/applications/chats",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Chat",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications/chats",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"chats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "0c5884e1-8217-4a3a-ae8e-b39d70237f9d"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.319068"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "wjga9xsi4e3t68sabkt6,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm,pn0dajcgjwbxv0np0uoc,vo9x0ao3rdaawmadtk0j"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"chats\": [\n        {\n            \"id\": 1,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:51:47.592Z\",\n            \"updated_at\": \"2022-03-05T12:51:47.592Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 2,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:52:00.329Z\",\n            \"updated_at\": \"2022-03-05T12:52:00.329Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 3,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:52:02.732Z\",\n            \"updated_at\": \"2022-03-05T12:52:02.732Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 4,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:52:04.588Z\",\n            \"updated_at\": \"2022-03-05T12:52:04.588Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 5,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:52:06.703Z\",\n            \"updated_at\": \"2022-03-05T12:52:06.703Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 6,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:58:28.381Z\",\n            \"updated_at\": \"2022-03-05T12:58:28.381Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 7,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:59:50.296Z\",\n            \"updated_at\": \"2022-03-05T12:59:50.296Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 8,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T12:59:57.952Z\",\n            \"updated_at\": \"2022-03-05T12:59:57.952Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 9,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T13:00:00.715Z\",\n            \"updated_at\": \"2022-03-05T13:00:00.715Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 10,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T13:00:33.536Z\",\n            \"updated_at\": \"2022-03-05T13:00:33.536Z\",\n            \"application_id\": 2,\n            \"application_token\": null\n        },\n        {\n            \"id\": 12,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T13:07:52.575Z\",\n            \"updated_at\": \"2022-03-05T13:07:52.575Z\",\n            \"application_id\": 2,\n            \"application_token\": \"25d310aaa\"\n        },\n        {\n            \"id\": 13,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-05T16:30:47.230Z\",\n            \"updated_at\": \"2022-03-05T16:30:47.230Z\",\n            \"application_id\": 2,\n            \"application_token\": \"25d310aaa\"\n        },\n        {\n            \"id\": 11,\n            \"messages_count\": 10,\n            \"created_at\": \"2022-03-05T13:07:34.055Z\",\n            \"updated_at\": \"2022-03-09T23:59:28.272Z\",\n            \"application_id\": 2,\n            \"application_token\": \"25d310aaa\"\n        },\n        {\n            \"id\": 14,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-10T00:22:58.834Z\",\n            \"updated_at\": \"2022-03-10T00:22:58.834Z\",\n            \"application_id\": 4,\n            \"application_token\": \"40b22bbdb\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Chat for certain application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/applications/40b22bbdb/chats",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"40b22bbdb",
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Chat for certain application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications/40b22bbdb/chats",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"40b22bbdb",
+										"chats"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "15656a46-699c-4ae4-87ed-41640be5a914"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.212693"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "mt8szcpsd0b2cmaf8ehy,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm,pn0dajcgjwbxv0np0uoc,vo9x0ao3rdaawmadtk0j,wjga9xsi4e3t68sabkt6,yg16q4ae00izbqruz1jw"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"chats\": [\n        {\n            \"id\": 14,\n            \"messages_count\": 0,\n            \"created_at\": \"2022-03-10T00:22:58.834Z\",\n            \"updated_at\": \"2022-03-10T00:22:58.834Z\",\n            \"application_id\": 4,\n            \"application_token\": \"40b22bbdb\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get certain chat for certain application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/applications/40b22bbdb/chats/14",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"40b22bbdb",
+								"chats",
+								"14"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get certain chat for certain application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications/40b22bbdb/chats/14",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"40b22bbdb",
+										"chats",
+										"14"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "f29a66d2-4edd-4570-bd1e-51a4f7ea6a91"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.595515"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "2lp8f0tijeiw9alswx2m,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm,pn0dajcgjwbxv0np0uoc,vo9x0ao3rdaawmadtk0j,wjga9xsi4e3t68sabkt6,yg16q4ae00izbqruz1jw"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"chats\": {\n        \"id\": 14,\n        \"messages_count\": 0,\n        \"created_at\": \"2022-03-10T00:22:58.834Z\",\n        \"updated_at\": \"2022-03-10T00:22:58.834Z\",\n        \"application_id\": 4,\n        \"application_token\": \"40b22bbdb\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "Create message for certain chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sender\" : \"Hosam tarek\",\n    \"content\": \"Hello world\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/applications/chats/:id/message",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"chats",
+								":id",
+								"message"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sender\" : \"Hosam tarek\",\n    \"content\": \"Hello world\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/applications/chats/14/message",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"chats",
+										"14",
+										"message"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "00e2f175-99ef-4044-b01c-80130af880da"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.818131"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "czvsang7eyd04g2gmyb3,2lp8f0tijeiw9alswx2m,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm,pn0dajcgjwbxv0np0uoc,vo9x0ao3rdaawmadtk0j,wjga9xsi4e3t68sabkt6"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Message created successfully\",\n    \"content\": {\n        \"id\": 25,\n        \"content\": \"Hello world\",\n        \"sender\": \"Hosam tarek\",\n        \"created_at\": \"2022-03-10T00:52:26.515Z\",\n        \"updated_at\": \"2022-03-10T00:52:26.515Z\",\n        \"chat_id\": 14\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all messages in application",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications/40b22bbdb/messages",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"40b22bbdb",
+										"messages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "4d99d060-e3a7-419d-8fd1-e2def25c8358"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.401343"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "a1yqy59be3lsnt4rp63v,puq9de5rpi8jz4mu1ky7,czvsang7eyd04g2gmyb3,2lp8f0tijeiw9alswx2m,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm,pn0dajcgjwbxv0np0uoc"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"messages\": [\n        {\n            \"id\": 1,\n            \"content\": \"Hello boyz and girlzzz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-05T16:35:01.030Z\",\n            \"updated_at\": \"2022-03-05T16:35:01.030Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 2,\n            \"content\": \"Hello boyz and girlzzz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-05T16:50:05.886Z\",\n            \"updated_at\": \"2022-03-05T16:50:05.886Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 3,\n            \"content\": \"Hello boyz and girlzzz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-05T16:50:09.139Z\",\n            \"updated_at\": \"2022-03-05T16:50:09.139Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 4,\n            \"content\": \"Hello boyz and girlzzz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-05T16:50:11.509Z\",\n            \"updated_at\": \"2022-03-05T16:50:11.509Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 5,\n            \"content\": \"CHANGES NEED ACTIONS \",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-05T16:50:13.581Z\",\n            \"updated_at\": \"2022-03-05T19:03:57.900Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 6,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:30:47.453Z\",\n            \"updated_at\": \"2022-03-07T21:30:47.453Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 7,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:31:01.332Z\",\n            \"updated_at\": \"2022-03-07T21:31:01.332Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 8,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:34:50.046Z\",\n            \"updated_at\": \"2022-03-07T21:34:50.046Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 9,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:35:19.354Z\",\n            \"updated_at\": \"2022-03-07T21:35:19.354Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 10,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:37:35.581Z\",\n            \"updated_at\": \"2022-03-07T21:37:35.581Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 11,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:38:03.817Z\",\n            \"updated_at\": \"2022-03-07T21:38:03.817Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 12,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:41:18.345Z\",\n            \"updated_at\": \"2022-03-07T21:41:18.345Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 13,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:41:52.139Z\",\n            \"updated_at\": \"2022-03-07T21:41:52.139Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 14,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:41:55.468Z\",\n            \"updated_at\": \"2022-03-07T21:41:55.468Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 15,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:42:13.275Z\",\n            \"updated_at\": \"2022-03-07T21:42:13.275Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 16,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:44:15.857Z\",\n            \"updated_at\": \"2022-03-07T21:44:15.857Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 17,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:47:31.003Z\",\n            \"updated_at\": \"2022-03-07T21:47:31.003Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 18,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:54:33.664Z\",\n            \"updated_at\": \"2022-03-07T21:54:33.664Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 19,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:56:59.656Z\",\n            \"updated_at\": \"2022-03-07T21:56:59.656Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 20,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:57:31.342Z\",\n            \"updated_at\": \"2022-03-07T21:57:31.342Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 21,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:57:48.588Z\",\n            \"updated_at\": \"2022-03-07T21:57:48.588Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 22,\n            \"content\": \"Hello boyz and boyz\",\n            \"sender\": \"Hossam Ouda\",\n            \"created_at\": \"2022-03-07T21:58:44.278Z\",\n            \"updated_at\": \"2022-03-07T21:58:44.278Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 23,\n            \"content\": \"sama\",\n            \"sender\": \"hellozzz\",\n            \"created_at\": \"2022-03-09T23:56:57.020Z\",\n            \"updated_at\": \"2022-03-09T23:56:57.020Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 24,\n            \"content\": \"sama\",\n            \"sender\": \"hellozzz\",\n            \"created_at\": \"2022-03-09T23:59:27.985Z\",\n            \"updated_at\": \"2022-03-09T23:59:27.985Z\",\n            \"chat_id\": 11\n        },\n        {\n            \"id\": 25,\n            \"content\": \"Hello world\",\n            \"sender\": \"Hosam tarek\",\n            \"created_at\": \"2022-03-10T00:52:26.515Z\",\n            \"updated_at\": \"2022-03-10T00:52:26.515Z\",\n            \"chat_id\": 14\n        },\n        {\n            \"id\": 26,\n            \"content\": \"Hello world\",\n            \"sender\": \"Hosam tarek\",\n            \"created_at\": \"2022-03-10T00:53:47.955Z\",\n            \"updated_at\": \"2022-03-10T00:53:47.955Z\",\n            \"chat_id\": 14\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all messages in certain chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/applications/chats/14/message",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"chats",
+								"14",
+								"message"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all messages in certain chat",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/applications/chats/14/message",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"chats",
+										"14",
+										"message"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "091ebba1-036d-4ccf-ac64-bc300a75d36f"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.394288"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "geg7v265bu50juger6v0,a1yqy59be3lsnt4rp63v,puq9de5rpi8jz4mu1ky7,czvsang7eyd04g2gmyb3,2lp8f0tijeiw9alswx2m,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8,zgqgr2xo412h45eifwcm"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"messages\": [\n        {\n            \"id\": 25,\n            \"content\": \"Hello world\",\n            \"sender\": \"Hosam tarek\",\n            \"created_at\": \"2022-03-10T00:52:26.515Z\",\n            \"updated_at\": \"2022-03-10T00:52:26.515Z\",\n            \"chat_id\": 14\n        },\n        {\n            \"id\": 26,\n            \"content\": \"Hello world\",\n            \"sender\": \"Hosam tarek\",\n            \"created_at\": \"2022-03-10T00:53:47.955Z\",\n            \"updated_at\": \"2022-03-10T00:53:47.955Z\",\n            \"chat_id\": 14\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update certain message content",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\" : \"Goodnight World!!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/applications/chats/14/message/26",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"applications",
+								"chats",
+								"14",
+								"message",
+								"26"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update certain message content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"content\" : \"Goodnight World!!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/applications/chats/14/message/26",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"applications",
+										"chats",
+										"14",
+										"message",
+										"26"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "5ec80fc1-71ac-49be-a6d1-c418793b7ce9"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.886759"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "tgwc9rmmyichhmtg7ljj,geg7v265bu50juger6v0,a1yqy59be3lsnt4rp63v,puq9de5rpi8jz4mu1ky7,czvsang7eyd04g2gmyb3,2lp8f0tijeiw9alswx2m,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6,kezvo68v0cvqtze3vzde,dsjismdzpv77w578mrgj,twom5352muokbhvg4wpb,xrpjiz6uat99lmpgwluz,784tz0943dzh6ovtpkjg,fxh8sredqlhy75ke7jve,g6b65c500c1oqx0h9ak8"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Message Updated Successfully\",\n    \"content\": {\n        \"content\": \"Goodnight World!!\",\n        \"id\": 26,\n        \"sender\": \"Hosam tarek\",\n        \"created_at\": \"2022-03-10T00:53:47.955Z\",\n        \"updated_at\": \"2022-03-10T01:02:27.891Z\",\n        \"chat_id\": 14\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "search in messages with a message content(elastic search)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/message?query=Goodnight",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"message"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Goodnight"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search in messages with a message content(elastic search)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/message?query=Goodnight",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"message"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "Goodnight"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin-when-cross-origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-store, must-revalidate, private, max-age=0"
+								},
+								{
+									"key": "X-Request-Id",
+									"value": "53bb6c2f-ba7a-41a2-bad3-646526d512b0"
+								},
+								{
+									"key": "X-Runtime",
+									"value": "0.152895"
+								},
+								{
+									"key": "X-MiniProfiler-Original-Cache-Control",
+									"value": "max-age=0, private, must-revalidate"
+								},
+								{
+									"key": "X-MiniProfiler-Ids",
+									"value": "7tasob9hbwoo8q9va2hu,c86olhif0sw1ur7p2w7o,2aykfyosu8unsiuxonga,jid2qhlaqhfrd4lqagae,4ptd3qlpipnpg5gxmfrm,9qvxclxj949l28cus3hd,t5ixxbjzzbr4dp31gkt6,tgwc9rmmyichhmtg7ljj,geg7v265bu50juger6v0,a1yqy59be3lsnt4rp63v,puq9de5rpi8jz4mu1ky7,czvsang7eyd04g2gmyb3,2lp8f0tijeiw9alswx2m,auy51zljmabff2i1uluf,3gsre2x2989p1sxpny8c,s8ter69507sp2y1szgo4,w7b9j8ia4j4q6duti6t2,zy697lu2tg7ohg5kai6w,7wnofevfmigpovlyzu97,2ip2xip9jyzhiotjiew6"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "__profilin=p%3Dt; path=/; HttpOnly; SameSite=Lax"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 26,\n        \"content\": \"Goodnight World!!\",\n        \"sender\": \"Hosam tarek\",\n        \"created_at\": \"2022-03-10T00:53:47.955Z\",\n        \"updated_at\": \"2022-03-10T01:02:27.891Z\",\n        \"chat_id\": 14\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
