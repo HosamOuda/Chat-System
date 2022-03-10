@@ -37,4 +37,5 @@
   <li> I assume that you will have rails env so just hit <code> rails s</code> </li>
   <li> Now you can run the project with all its features and capabilites and use the endpoints in the <code> Instabug Chat Endpoints </code> postman collection </li>
  </ol>
+ <hr>
 <h4> All endpoint URLs are provided with examples in the <code> Instabug Chat Endpoints   </code>  postman collection so it's only required to download it and import it in the postman </h4>
